@@ -6,7 +6,7 @@ import { Box } from '@chakra-ui/react';
 
 export const Layout = () => {
   return (
-    <Box w="100%" h="100%" bgGradient="linear(to-l, #7928CA, #FF0080)">
+    <Box w="100%" h="100hw" bgGradient="linear(to-r, green.200, pink.500)">
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
         <AppBar />
         <Suspense fallback={null}>

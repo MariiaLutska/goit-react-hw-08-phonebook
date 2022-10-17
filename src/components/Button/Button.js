@@ -13,6 +13,7 @@ export const ContactButton = ({
     <Button
       colorScheme="pink"
       // variant="outline"
+      m={2}
       size="md"
       type={type}
       {...otherProps}
