@@ -3,7 +3,10 @@ import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from '../../redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
-import css from './ContactForm.module.css';
+// import css from './ContactForm.module.css';
+import { Box } from '@chakra-ui/react';
+import { Input } from '@chakra-ui/react';
+import { ContactButton } from '../Button/Button';
 
 let nameId = nanoid();
 let numbId = nanoid();
@@ -59,11 +62,12 @@ export const ContactForm = () => {
   };
 
   return (
-    <div>
-      <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-        <label className={css.label}>
+    <Box>
+      <form onSubmit={handleSubmit} autoComplete="off">
+        <label>
           Name
-          <input
+          <Input
+            variant="filled"
             onInput={handleInputChange}
             value={name}
             type="text"
@@ -75,9 +79,10 @@ export const ContactForm = () => {
             id={nameId}
           />
         </label>
-        <label className={css.label}>
+        <label>
           Number
-          <input
+          <Input
+            variant="filled"
             onInput={handleInputChange}
             value={number}
             type="tel"
@@ -89,8 +94,8 @@ export const ContactForm = () => {
             id={numbId}
           />
         </label>
-        <button type="submit">Add contact</button>
+        <ContactButton type="submit">Add contact</ContactButton>
       </form>
-    </div>
+    </Box>
   );
 };

@@ -1,4 +1,7 @@
-import { Button } from '../Button/Button.styled';
+import {
+  Button,
+  // ButtonGroup
+} from '@chakra-ui/react';
 
 export const ContactButton = ({
   selected = false,
@@ -7,7 +10,13 @@ export const ContactButton = ({
   ...otherProps
 }) => {
   return (
-    <Button type={type} {...otherProps}>
+    <Button
+      colorScheme="pink"
+      // variant="outline"
+      size="md"
+      type={type}
+      {...otherProps}
+    >
       {children}
     </Button>
   );
