@@ -7,6 +7,12 @@ import { addContact } from 'redux/contacts/operations';
 import { Box } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react';
 import { ContactButton } from '../Button/Button';
+import {
+  // FormControl,
+  FormLabel,
+  // FormErrorMessage,
+  // FormHelperText,
+} from '@chakra-ui/react';
 
 let nameId = nanoid();
 let numbId = nanoid();
@@ -64,7 +70,7 @@ export const ContactForm = () => {
   return (
     <Box>
       <form onSubmit={handleSubmit} autoComplete="off">
-        <label>
+        <FormLabel>
           Name
           <Input
             variant="filled"
@@ -78,8 +84,8 @@ export const ContactForm = () => {
             required
             id={nameId}
           />
-        </label>
-        <label>
+        </FormLabel>
+        <FormLabel>
           Number
           <Input
             variant="filled"
@@ -93,7 +99,7 @@ export const ContactForm = () => {
             required
             id={numbId}
           />
-        </label>
+        </FormLabel>
         <ContactButton type="submit">Add contact</ContactButton>
       </form>
     </Box>

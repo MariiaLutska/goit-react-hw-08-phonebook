@@ -3,6 +3,12 @@ import { register } from 'redux/auth/operations';
 // import css from './RegisterForm.module.css';
 import { Input } from '@chakra-ui/react';
 import { ContactButton } from '../Button/Button';
+import {
+  // FormControl,
+  FormLabel,
+  // FormErrorMessage,
+  // FormHelperText,
+} from '@chakra-ui/react';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -22,18 +28,18 @@ export const RegisterForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <FormLabel>
         Username
         <Input variant="filled" type="text" name="name" />
-      </label>
-      <label>
+      </FormLabel>
+      <FormLabel>
         Email
         <Input variant="filled" type="email" name="email" />
-      </label>
-      <label>
+      </FormLabel>
+      <FormLabel>
         Password
         <Input variant="filled" type="password" name="password" />
-      </label>
+      </FormLabel>
       <ContactButton type="submit">Register</ContactButton>
     </form>
   );

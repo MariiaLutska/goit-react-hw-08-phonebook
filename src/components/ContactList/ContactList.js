@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Contact } from '../Contact/Contact';
-import { Box } from '../Box';
+import { Box } from '@chakra-ui/react';
 import { selectContacts } from '../../redux/contacts/selectors';
 import { selectLoading } from '../../redux/contacts/selectors';
 import { Circles } from 'react-loader-spinner';
