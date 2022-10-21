@@ -8,11 +8,8 @@ export const Contact = ({ contact }) => {
 
   const handleDelete = () => dispatch(deleteContact(contact));
 
-  // const handleToggle = () => dispatch(toggleCompleted(contact));
-
   return (
     <Box color="primary" as="li" display="block" alignItems="center">
-      {/* <label type="value" onChange={handleToggle} /> */}
       {contact.name} : {contact.number}
       <ContactButton type="button" onClick={handleDelete}>
         Delete

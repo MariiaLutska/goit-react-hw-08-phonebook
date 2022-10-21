@@ -3,16 +3,10 @@ import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from '../../redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
-// import css from './ContactForm.module.css';
 import { Box } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react';
 import { ContactButton } from '../Button/Button';
-import {
-  // FormControl,
-  FormLabel,
-  // FormErrorMessage,
-  // FormHelperText,
-} from '@chakra-ui/react';
+import { FormLabel } from '@chakra-ui/react';
 
 let nameId = nanoid();
 let numbId = nanoid();
@@ -20,24 +14,11 @@ let numbId = nanoid();
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // const [id, setId] = useState('');
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-  //   dispatch(
-  //     addContact({
-  //       name: form.elements.name.value,
-  //       number: form.elements.number.value,
-  //     })
-  //   );
-  //   form.reset();
-  // };
   const handleInputChange = e => {
     const { name, value } = e.target;
-    // setId(nanoid());
 
     if (name === 'name') {
       return setName(value);
